@@ -17,12 +17,12 @@ def main(job_id, params):
                                         maxlen=50,
                                         batch_size=32,
                                         valid_batch_size=32,
-					datasets=['home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok'%os.environ['USER'],
-					'home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok'%os.environ['USER']],
-					valid_datasets=['home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok'%os.environ['USER'],
-					'home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'%os.environ['USER']],
-					dictionaries=['home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok.pkl'%os.environ['USER'],
-					'home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok.pkl'%os.environ['USER']],
+					datasets=['home/ubuntu/codes/dl4mt-tutorial/%s/data/europarl-v7.fr-en.en.tok'%os.environ['USER'],
+					'home/ubuntu/codes/dl4mt-tutorial/%s/data/europarl-v7.fr-en.fr.tok'%os.environ['USER']],
+					valid_datasets=['home/ubuntu/codes/dl4mt-tutorial/%s/data/newstest2011.en.tok'%os.environ['USER'],
+					'home/ubuntu/codes/dl4mt-tutorial/%s/data/newstest2011.fr.tok'%os.environ['USER']],
+					dictionaries=['home/ubuntu/codes/dl4mt-tutorial/%s/data/europarl-v7.fr-en.en.tok.pkl'%os.environ['USER'],
+					'home/ubuntu/codes/dl4mt-tutorial/%s/data/europarl-v7.fr-en.fr.tok.pkl'%os.environ['USER']],
                                         validFreq=5000,
                                         dispFreq=10,
                                         saveFreq=5000,
@@ -33,7 +33,7 @@ def main(job_id, params):
 
 if __name__ == '__main__':
     main(0, {
-        'model': ['home/ubuntu/models/model_session1.npz'%os.environ['USER']],
+        'model': ['home/ubuntu/%s/models/model_session1.npz'%os.environ['USER']],
         'dim_word': [500],
         'dim': [1024],
         'n-words': [30000],
