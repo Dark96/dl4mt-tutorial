@@ -33,7 +33,7 @@ def main(job_id, params):
 
 if __name__ == '__main__':
     main(0, {
-        'model': ['home/ubuntu/codes/dl4mt-tutorial/models/model_session1.npz'%os.environ['USER']],
+        'model': ['home/ubuntu/models/model_session1.npz'%os.environ['USER']],
         'dim_word': [500],
         'dim': [1024],
         'n-words': [30000],
