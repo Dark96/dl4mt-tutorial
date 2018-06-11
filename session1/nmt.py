@@ -875,13 +875,13 @@ def train(dim_word=100,  # word vector dimensionality
           validFreq=1000,
           saveFreq=1000,  # save the parameters after every saveFreq updates
           sampleFreq=100,  # generate some samples after every sampleFreq
-          datasets=['home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok',
-              'home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok'],
-          valid_datasets=['home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok',
-                          'home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'],
+          datasets=['/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok',
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok'],
+          valid_datasets=['/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok',
+                          '/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'],
           dictionaries=[
-              'home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok.pkl',
-              'home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok.pkl'],
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok.pkl',
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok.pkl'],
           use_dropout=False,
           reload_=False,
           overwrite=False):
