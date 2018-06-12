@@ -36,7 +36,7 @@ def main():
             worddict[ww] = ii+2
 
         with open('%s.pkl'%filename, 'wb') as f:
-            pkl.dump(worddict, f)
+            pkl.dump(worddict, f, protocol=2)
 
         print('Done')
 
