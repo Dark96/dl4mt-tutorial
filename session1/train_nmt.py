@@ -40,7 +40,7 @@ if __name__ == '__main__':
         'optimizer': ['adadelta'],
         'decay-c': [0.],
         'use-dropout': [False],
-        'learning-rate': [0.0001],
+        'learning-rate': [0.003],
         'reload': [False]})
 
 
