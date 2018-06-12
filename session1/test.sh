@@ -5,7 +5,7 @@
 #PBS -A course
 #PBS -q ShortQ
 
-export THEANO_FLAGS=device=cpu,floatX=float32
+export THEANO_FLAGS=device=cuda0,floatX=float32
 
 python ./translate.py -n -p 20 \
 	$HOME/models/model_session1.npz  \
