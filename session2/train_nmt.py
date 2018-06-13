@@ -26,19 +26,19 @@ def main(job_id, params):
                      dispFreq=10,
                      saveFreq=100,
                      sampleFreq=100,
-                     datasets=['../data/hal/train/tok/en',
-                               '../data/hal/train/tok/fr'],
-                     valid_datasets=['../data/hal/dev/tok/en',
-                                     '../data/hal/dev/tok/fr'],
-                     dictionaries=['../data/hal/train/tok/en.pkl',
-                                   '../data/hal/train/tok/fr.pkl'],
+                     datasets=['/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok',
+                               '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok'],
+                     valid_datasets=['/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok',
+                                     '/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'],
+                     dictionaries=['/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok.pkl',
+                                   '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok.pkl'],
                      use_dropout=params['use-dropout'][0],
                      overwrite=False)
     return validerr
 
 if __name__ == '__main__':
     main(0, {
-        'model': ['model_hal.npz'],
+        'model': ['/home/ubuntu/models/model_hal.npz'],
         'dim_word': [512],
         'dim': [1024],
         'n-words': [30000],
@@ -46,5 +46,5 @@ if __name__ == '__main__':
         'decay-c': [0.],
         'clip-c': [1.],
         'use-dropout': [False],
-        'learning-rate': [0.0001],
+        'learning-rate': [0.003],
         'reload': [True]})
