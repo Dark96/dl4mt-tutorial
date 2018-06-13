@@ -7,7 +7,6 @@
 
 export THEANO_FLAGS=device=cpu,floatX=float32
 
-cd $PBS_O_WORKDIR
 python ./translate.py -n -p 8 \
 	$HOME/models/model_session2.npz  \
 	$HOME/data/europarl-v7.fr-en.en.tok.pkl \
