@@ -5,9 +5,8 @@
 #PBS -A course
 #PBS -q GpuQ
 
-export THEANO_FLAGS=device=gpu,floatX=float32
+export THEANO_FLAGS=device=cuda0,floatX=float32
 
-cd $PBS_O_WORKDIR
 python ./train_nmt.py
 
 
