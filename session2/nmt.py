@@ -1002,13 +1002,13 @@ def train(dim_word=100,  # word vector dimensionality
           saveFreq=1000,   # save the parameters after every saveFreq updates
           sampleFreq=100,   # generate some samples after every sampleFreq
           datasets=[
-              '/data/lisatmp3/chokyun/europarl/europarl-v7.fr-en.en.tok',
-              '/data/lisatmp3/chokyun/europarl/europarl-v7.fr-en.fr.tok'],
-          valid_datasets=['../data/dev/newstest2011.en.tok',
-                          '../data/dev/newstest2011.fr.tok'],
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok',
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok'],
+          valid_datasets=['/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok',
+                          '/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'],
           dictionaries=[
-              '/data/lisatmp3/chokyun/europarl/europarl-v7.fr-en.en.tok.pkl',
-              '/data/lisatmp3/chokyun/europarl/europarl-v7.fr-en.fr.tok.pkl'],
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.en.tok.pkl',
+              '/home/ubuntu/codes/dl4mt-tutorial/data/europarl-v7.fr-en.fr.tok.pkl'],
           use_dropout=False,
           reload_=False,
           overwrite=False):
