@@ -5,7 +5,6 @@ from nmt import train
 
 def main(job_id, params):
     print params
-    username = os.environ['USER']
     validerr = train(
         saveto=params['model'][0],
         reload_=params['reload'][0],
@@ -20,14 +19,14 @@ def main(job_id, params):
         batch_size=32,
         valid_batch_size=32,
         datasets=[
-            '/ichec/home/users/%s/data/all.en.concat.shuf.gz' % username,
-            '/ichec/home/users/%s/data/all.fr.concat.shuf.gz' % username],
+            '/home/ubuntu/codes/dl4mt-tutorial/data/all.en.concat.shuf.gz',
+            '/home/ubuntu/codes/dl4mt-tutorial/data/all.fr.concat.shuf.gz'],
         valid_datasets=[
-            '/ichec/home/users/%s/data/newstest2011.en.tok' % username,
-            '/ichec/home/users/%s/data/newstest2011.fr.tok' % username],
+            '/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.en.tok',
+            '/home/ubuntu/codes/dl4mt-tutorial/data/newstest2011.fr.tok'],
         dictionaries=[
-            '/ichec/home/users/%s/data/all.en.concat.gz.pkl' % username,
-            '/ichec/home/users/%s/data/all.fr.concat.gz.pkl' % username],
+            '/home/ubuntu/codes/dl4mt-tutorial/data/all.en.concat.gz.pkl',
+            '/home/ubuntu/codes/dl4mt-tutorial/data/all.fr.concat.gz.pkl'],
         validFreq=5000,
         dispFreq=10,
         saveFreq=5000,
@@ -39,13 +38,12 @@ def main(job_id, params):
 if __name__ == '__main__':
     main(0, {
         'model': [
-            '/ichec/home/users/%s/models/model_session1_all.npz' %
-            os.environ['USER']],
+            '/home/ubuntu/models/model_session1_all.npz'],
         'dim_word': [500],
         'dim': [1024],
         'n-words': [30000],
         'optimizer': ['adadelta'],
         'decay-c': [0.],
         'use-dropout': [False],
-        'learning-rate': [0.0001],
+        'learning-rate': [0.003],
         'reload': [False]})
